@@ -21,7 +21,7 @@ class Procesos {
     res.status(404).json({ text: "El registro no existe" });
   }
   public async create(req: Request, res: Response): Promise<void> { 
-    
+    req.body.estado=true;
     try {
       const result = await pool.query(`INSERT INTO proceso set ? `, [
         req.body,
