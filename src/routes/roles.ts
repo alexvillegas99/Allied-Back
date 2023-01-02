@@ -1,7 +1,5 @@
 import  { Router } from 'express';
-import roles from '../controllers/user';
-
-
+import roles from '../controllers/roles';
 import { checkJwt } from '../middleware/jwt';
 import { checkRole } from '../middleware/role';
 
